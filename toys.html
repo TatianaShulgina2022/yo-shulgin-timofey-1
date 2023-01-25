@@ -36,46 +36,80 @@
         <li>Toys</li>
     </ul>
         <h2 class="h__two__op">Filter</h2><!--его надо будет скрыть так так его нет в дизайне-->
-    <section class="form__back__gr disp">
-        <form class="disp container" action="">
-            <fieldset class="form__border form__range">
-                <label for="Cost">Cost</label>
-                <input type="range">
-            <ul class="disp">
-                <label class="" for="Number">0</label>
-                <label for="Number">500</label>
-            </ul>
-            </fieldset>
-            <fieldset class="form__border">
-                <legend>Color</legend>
-                <input type="checkbox" name="Black" value="black" id="colour_black">
-                <label for="colour_black">Black</label>
-                <input type="checkbox" name="Blue" value="blue" id="colour_blue">
-                <label for="colour_blue">Blue</label>
-                <input type="checkbox" name="Green" value="green" id="colour_green">
-                <label for="colour_green">Green</label>
-                <input type="checkbox" name="White" value="white" id="colour_white">
-                <label for="colour_white">White</label>
-            </fieldset>
-            <fieldset class="form__border">
-                <legend>Delivery</legend>
-                <input type="radio" name="Free shipping">
-                <label for="Free shipping">Free shipping</label>
-                <input type="radio" name="Fast shipping">
-                <label for="Fast shipping">Fast shipping</label>
-            </fieldset>
-            <fieldset class="form__border">
-                <legend>Amount</legend>
-                <input type="radio" value="0-5">
-                <label for="0-5">0-5</label>
-                <input type="radio" value="10-20">
-                <label for="10-20">10-20</label>
-                <input type="radio" value="20-50">
-                <label for="20-50">20-50</label>
-            </fieldset>
-        </form>
-            <button class="btn" type="button">APPLY</button>
-    </section>
+        <div class="filter__block">
+            <form class="filter__list container" action="">
+                <fieldset class="range">
+                    <label class="title__range" for="Cost">Cost</label>
+                    <input type="range" name="Cost" id="Cost" min="0" max="500" step="1" value="100">
+                    <div class="range_item">
+                        <label for="0">0</label>
+                        <label for="500">500</label>
+                    </div>
+                </fieldset>
+                 <fieldset class="color__filter">
+                    <legend class="title__color">Color</legend>
+                    <ul class="color__list">
+                        <li>
+                            <input class="checkbox_input" id="checkbox1" type="checkbox"> 
+                            <label class="checkbox__label black" for="checkbox1">Black</label>
+                        </li>
+                        <li>
+                             <input class="checkbox_input" id="checkbox2" type="checkbox"> 
+                            <label class="checkbox__label blue" for="checkbox2">Blue</label>
+                        </li>
+                           <li>
+                             <input class="checkbox_input" id="checkbox3" type="checkbox"> 
+                             <label class="checkbox__label green" for="checkbox3">Green</label>
+                         </li>
+                         <li>
+                             <input class="checkbox_input" id="checkbox4" type="checkbox"> 
+                             <label class="checkbox__label white" for="checkbox4">White</label>
+                         </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="delivery__filter">
+                    <legend class="title__delivery">Delivery</legend>
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" name="category" value="free" class="real-radio" checked>
+                            <span class="custom-radio"></span>
+                            Free shipping
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" name="category" value="fast" class="real-radio">
+                            <span class="custom-radio"></span>
+                            Fast shipping
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="amount__filter">
+                     <legend class="title__amount">Amount</legend>
+                     <ul class="amount__list">
+                        <li class="amound-bg">
+                            <input class="amount__input" type="radio" name="level" value="0-5" id="first" checked>
+                            <label class="amount-label" for="first">
+                                0-5
+                            </label>
+                        </li>
+                        <li class="amound-bg">
+                            <input class="amount__input" type="radio" name="level" value="10-20" id="second">
+                            <label class="amount-label" for="second">
+                                10-20
+                            </label>
+                        </li>
+                        <li class="amound-bg">
+                            <input class="amount__input" type="radio" name="level" value="20-50" id="third">
+                            <label class="amount-label" for="third">
+                                20-50
+                            </label>
+                        </li>
+                     </ul>
+                 </fieldset>
+                <button type="button" class="btn__filter">APPLY</button>
+            </form>
+        </div>
     </main>
     <section class="container">
         <ul>
